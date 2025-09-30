@@ -45,7 +45,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
     {
         (*head)->prev->next = (*head)->next;
         if ((*head)->next)
-            (*head)->next->prev = (*head)->prev;  // Update next node's prev pointer
+            (*head)->next->prev = (*head)->prev;
         free(*head);
         *head = saved_head;
     }
